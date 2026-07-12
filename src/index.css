@@ -1,0 +1,204 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0b0d12;
+  --color-surface: #151922;
+  --color-surface-2: #202632;
+  --color-border: #303846;
+  --color-text: #f8f7f3;
+  --color-text-muted: #b1b6c2;
+  --color-text-dim: #7d8593;
+
+  --color-accent: #d7f36b;
+  --color-accent-strong: #c0df4e;
+  --color-imposter: #ef4444;
+  --color-imposter-bg: rgba(239, 68, 68, 0.12);
+  --color-knower: #38bdf8;
+  --color-knower-bg: rgba(56, 189, 248, 0.12);
+
+  --color-tier-low: #22c55e;
+  --color-tier-mid: #f59e0b;
+  --color-tier-high: #fb923c;
+
+  --font-sans: "Avenir Next", "Noto Sans", "Segoe UI", system-ui, sans-serif;
+  --font-display: "Avenir Next", "Trebuchet MS", "Segoe UI", sans-serif;
+
+  --radius-card: 1.25rem;
+
+  --animate-float: float 3s ease-in-out infinite;
+  --animate-shake: shake 0.45s ease-in-out 1;
+  --animate-pulse-fast: pulse-fast 0.8s ease-in-out infinite;
+  --animate-pop-in: pop-in 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 1;
+  --animate-confetti: confetti-fall 1.6s ease-out forwards;
+  --animate-spin-slow: spin-slow 4s linear infinite;
+  --animate-glow-pulse: glow-pulse 2.2s ease-in-out infinite;
+  --animate-fade-in: fade-in 0.3s ease-out 1;
+  --animate-wiggle: wiggle 0.6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-5px) rotate(-1deg);
+  }
+  40% {
+    transform: translateX(5px) rotate(1deg);
+  }
+  60% {
+    transform: translateX(-4px) rotate(-1deg);
+  }
+  80% {
+    transform: translateX(4px) rotate(1deg);
+  }
+}
+
+@keyframes pulse-fast {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes pop-in {
+  0% {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.06);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes confetti-fall {
+  0% {
+    transform: translateY(-30px) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(160px) rotate(540deg);
+    opacity: 0;
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes glow-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(192, 132, 252, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 28px 6px rgba(192, 132, 252, 0.3);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-8deg);
+  }
+  75% {
+    transform: rotate(8deg);
+  }
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overscroll-behavior: none;
+}
+
+button,
+input {
+  font-size: 16px;
+}
+
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--color-accent) 75%, white);
+  outline-offset: 3px;
+}
+
+.safe-bottom {
+  padding-bottom: max(2rem, env(safe-area-inset-bottom));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  font-family: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
