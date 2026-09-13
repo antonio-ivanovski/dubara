@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useCurrent, usePlayers } from '../store/selectors';
 import { useGameStore } from '../store/gameStore';
 import { WordCard } from './WordCard';
+import { HINT_GLOSSARY } from '../game/hintGlossary';
 
 export function RevealQueue() {
   const current = useCurrent();
@@ -32,6 +33,12 @@ export function RevealQueue() {
   const isImposter = playerId === current.imposterId;
   const wordToShow = isImposter ? current.hintUsed : current.word.word;
 
+  /* Knowers get the secret word's explanation; the imposter gets the
+     hint's explanation when it exists (button hidden otherwise). */
+  const explanation = isImposter
+    ? (HINT_GLOSSARY[wordToShow] ?? null)
+    : { definition: current.word.definition, example: current.word.example };
+
   const handleDismiss = () => {
     advanceReveal();
     setShowingWord(false);
@@ -43,6 +50,7 @@ export function RevealQueue() {
         <WordCard
           word={wordToShow}
           isImposter={isImposter}
+          explanation={explanation}
           onDismiss={handleDismiss}
         />
       </div>
@@ -63,6 +71,7 @@ export function RevealQueue() {
           'flex flex-col items-center justify-center flex-1 w-full min-h-[60svh] ' +
           'rounded-3xl bg-surface border border-border p-6 shadow-[0_18px_60px_rgba(0,0,0,0.2)] ' +
           'transition-colors active:scale-[0.98] touch-manipulation select-none ' +
+          'cursor-pointer ' +
           'opacity-90 animate-pulse-fast'
         }
       >

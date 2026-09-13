@@ -45,6 +45,7 @@ export function Button({
         'inline-flex items-center justify-center ' +
         'transition-all duration-150 ease-out ' +
         'select-none touch-manipulation ' +
+        'cursor-pointer disabled:cursor-not-allowed ' +
         variantClasses[variant] +
         ' ' +
         sizeClasses[size] +

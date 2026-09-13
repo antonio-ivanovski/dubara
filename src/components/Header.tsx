@@ -21,7 +21,7 @@ export function Header({ rightSlot, onOpenScoreboard, showLogo = true }: HeaderP
         {onOpenScoreboard && (
           <button
             onClick={onOpenScoreboard}
-            className="min-h-12 min-w-12 rounded-xl bg-surface border border-border text-base hover:bg-surface-2 active:scale-[0.98]"
+            className="min-h-12 min-w-12 rounded-xl bg-surface border border-border text-base hover:bg-surface-2 active:scale-[0.98] cursor-pointer"
             aria-label="Резултати"
           >
             📊

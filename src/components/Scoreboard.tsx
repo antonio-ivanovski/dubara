@@ -42,7 +42,7 @@ export function Scoreboard({ open, onClose }: ScoreboardProps) {
           <h2 className="text-lg font-bold text-text">Резултати</h2>
           <button
             onClick={onClose}
-            className="w-12 h-12 min-h-12 flex items-center justify-center rounded-xl text-text-dim hover:text-text hover:bg-surface-2 transition-colors active:scale-[0.98] touch-manipulation select-none"
+            className="w-12 h-12 min-h-12 flex items-center justify-center rounded-xl text-text-dim hover:text-text hover:bg-surface-2 transition-colors active:scale-[0.98] touch-manipulation select-none cursor-pointer"
             aria-label="Затвори"
           >
             ✕

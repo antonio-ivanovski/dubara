@@ -10,6 +10,8 @@ const MOCK_WORD: Word = {
     mid: ['hint2'],
     high: ['hint3'],
   },
+  definition: 'Mock дефиниција.',
+  example: 'Ова е тест.',
 };
 
 const DIFFICULTY: Difficulty = 'low';

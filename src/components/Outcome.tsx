@@ -125,7 +125,7 @@ export function Outcome() {
           <p className="text-xs text-text-dim uppercase tracking-wider mb-1">
             Тајниот збор:
           </p>
-          <p className="text-2xl font-bold text-text break-words">{current.word.word}</p>
+          <p className="text-2xl font-bold text-text break-words [overflow-wrap:anywhere] min-w-0">{current.word.word}</p>
         </div>
         <div className="min-w-0 pl-3 border-l border-border">
           <p className="text-xs text-text-dim uppercase tracking-wider mb-2">
@@ -133,7 +133,7 @@ export function Outcome() {
           </p>
           <span
             className={
-              'inline-block max-w-full px-3 py-1.5 rounded-full border text-sm font-medium break-words ' +
+              'inline-block max-w-full min-w-0 px-3 py-1.5 rounded-full border text-sm font-medium break-all [overflow-wrap:anywhere] whitespace-normal leading-snug ' +
               TIER_COLOR[current.difficulty] + ' ' +
               TIER_BORDER[current.difficulty] + ' ' +
               TIER_BG[current.difficulty]

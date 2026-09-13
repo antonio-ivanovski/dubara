@@ -118,7 +118,7 @@ export function HowToPlay({ open, onClose }: HowToPlayProps) {
           <button
             type="button"
             onClick={onClose}
-            className="w-12 h-12 min-h-12 flex items-center justify-center rounded-full text-text-dim hover:text-text hover:bg-surface transition-colors touch-manipulation"
+            className="w-12 h-12 min-h-12 flex items-center justify-center rounded-full text-text-dim hover:text-text hover:bg-surface transition-colors touch-manipulation cursor-pointer"
             aria-label="Затвори"
           >
             ✕

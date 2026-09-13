@@ -194,6 +194,14 @@ button {
   -webkit-tap-highlight-color: transparent;
 }
 
+button:not(:disabled) {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
 @keyframes shimmer {
   0% {
     background-position: -200% 0;

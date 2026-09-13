@@ -41,6 +41,10 @@ export interface Word {
   word: string;
   category: WordCategory;
   hints: Record<Difficulty, string[]>;
+  /** Кратко речничко објаснување што е зборот (без самиот збор во текстот). */
+  definition: string;
+  /** Пример-реченица во која е употребен зборот. */
+  example: string;
 }
 
 export type Phase =

@@ -94,7 +94,7 @@ export function Lobby() {
                 <button
                   type="button"
                   onClick={() => removePlayer(p.id)}
-                  className="w-10 h-10 min-h-10 -mr-1.5 flex items-center justify-center rounded-full text-text-dim hover:text-text hover:bg-surface transition-colors text-sm"
+                  className="w-10 h-10 min-h-10 -mr-1.5 flex items-center justify-center rounded-full text-text-dim hover:text-text hover:bg-surface transition-colors text-sm cursor-pointer"
                   aria-label={`Отстрани ${p.name}`}
                 >
                   ✕
@@ -120,7 +120,7 @@ export function Lobby() {
             type="button"
             onClick={() => setSubRoundCapOverride(null)}
             className={
-              'px-5 py-2 min-h-12 rounded-full text-sm transition-colors select-none touch-manipulation ' +
+              'px-5 py-2 min-h-12 rounded-full text-sm transition-colors select-none touch-manipulation cursor-pointer ' +
               (override === null
                 ? 'bg-accent text-bg'
                 : 'bg-surface text-text-muted border border-border hover:bg-surface-2')
@@ -134,7 +134,7 @@ export function Lobby() {
               type="button"
               onClick={() => setSubRoundCapOverride(n)}
               className={
-                'px-5 py-2 min-h-12 rounded-full text-sm transition-colors select-none touch-manipulation ' +
+                'px-5 py-2 min-h-12 rounded-full text-sm transition-colors select-none touch-manipulation cursor-pointer ' +
                 (override === n
                   ? 'bg-accent text-bg'
                   : 'bg-surface text-text-muted border border-border hover:bg-surface-2')

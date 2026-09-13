@@ -85,7 +85,7 @@ export function Vote() {
             <button
               key={p.id}
               onClick={() => castKick(p.id)}
-              className="w-full min-h-16 rounded-2xl bg-surface border border-border text-text text-lg font-medium transition-colors active:scale-[0.98] touch-manipulation select-none animate-pop-in"
+              className="w-full min-h-16 rounded-2xl bg-surface border border-border text-text text-lg font-medium transition-colors active:scale-[0.98] touch-manipulation select-none cursor-pointer animate-pop-in"
               style={{ animationDelay: `${idx * 80}ms` }}
             >
               {p.name}

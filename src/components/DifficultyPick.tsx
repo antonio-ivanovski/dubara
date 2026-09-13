@@ -18,7 +18,7 @@ export function DifficultyPick() {
           <button
             key={d}
             onClick={() => setDifficulty(d)}
-            className="w-full min-h-24 flex flex-col items-center justify-center gap-1 rounded-2xl p-5 bg-surface border border-border text-text transition-colors active:scale-[0.98] touch-manipulation select-none"
+            className="w-full min-h-24 flex flex-col items-center justify-center gap-1 rounded-2xl p-5 bg-surface border border-border text-text transition-colors active:scale-[0.98] touch-manipulation select-none cursor-pointer"
           >
             <span className="text-2xl font-bold">{DIFFICULTY_LABELS[d]}</span>
             <span className="text-sm text-text-muted">
